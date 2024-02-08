@@ -1,0 +1,35 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+
+class DatabaseSeeder extends Seeder
+{
+    /**
+     * Seed the application's database.
+     */
+    public function run(): void
+    {
+        // Adding an admin user
+        $user = \App\Models\User::factory()
+            ->count(1)
+            ->create([
+                'email' => 'admin@admin.com',
+                'password' => \Hash::make('admin'),
+            ]);
+        $this->call(PermissionsSeeder::class);
+
+        $this->call(CahierchargeSeeder::class);
+        $this->call(CompteurelecSeeder::class);
+        $this->call(CompteurgazSeeder::class);
+        $this->call(ContactSeeder::class);
+        $this->call(CppSeeder::class);
+        $this->call(EntrepriseSeeder::class);
+        $this->call(HistoriqueSeeder::class);
+        $this->call(ScoreSeeder::class);
+        $this->call(SignatureSeeder::class);
+        $this->call(SiteSeeder::class);
+        $this->call(UserSeeder::class);
+    }
+}
