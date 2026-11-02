@@ -64,3 +64,17 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Deploy
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fghostland-dev%2Faccess-client-portal)
+
+Click the button to deploy your own copy on Vercel in one step.
+
+Set these environment variables in the Vercel project settings (see `.env.example`):
+
+- `VITE_PUSHER_APP_KEY`
+- `VITE_PUSHER_CLUSTER`
+- `VITE_PUSHER_HOST`
+- `VITE_PUSHER_PORT`
+- `VITE_PUSHER_SCHEME`
